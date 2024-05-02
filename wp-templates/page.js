@@ -13,7 +13,7 @@ export default function Component(props) {
   const { title: siteTitle, description: siteDescription } =
     props.data.generalSettings;
   const menuItems = props.data.primaryMenuItems.nodes;
-  const { title, content } = props.data.page;
+  const { title, content, blockTest } = props.data.page;
 
   return (
     <>
@@ -30,6 +30,7 @@ export default function Component(props) {
       <main className="container">
         <EntryHeader title={title} />
         <div dangerouslySetInnerHTML={{ __html: content }} />
+        <pre>{JSON.stringify(blockTest, null, 2)}</pre>
       </main>
 
       <Footer />
@@ -50,6 +51,24 @@ Component.query = gql`
     page(id: $databaseId, idType: DATABASE_ID, asPreview: $asPreview) {
       title
       content
+      blockTest {
+        fieldGroupName
+        pageLayout {
+          fieldGroupName
+          ... on BlockTestPageLayoutHeaderLayout {
+            fieldGroupName
+            testText
+          }
+          ... on BlockTestPageLayoutFooterLayout {
+            fieldGroupName
+            testList {
+              fieldGroupName
+              text
+              testDate
+            }
+          }
+        }
+      }
     }
     ...HeaderFragment
   }

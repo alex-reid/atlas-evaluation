@@ -6,7 +6,7 @@ export default function EntryHeader({ title, date, author }) {
       {title && <h2 className={style.title}>{title}</h2>}
 
       {date && author && (
-        <div className={style.meta}>
+        <div className="text-3xl font-bold underline">
           By {author} on <time>{new Date(date).toDateString()}</time>
         </div>
       )}
