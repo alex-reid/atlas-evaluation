@@ -9,7 +9,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'General Sans', sans-serif;
-  @apply bg-bg-primary text-secondary-400;
+  @apply bg-bg-primary text-secondary-400 font-normal;
 }
 
 a {
