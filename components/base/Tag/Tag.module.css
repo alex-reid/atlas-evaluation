@@ -1,0 +1,12 @@
+.base{
+ @apply bg-acc-green inline-block w-max font-normal border border-bd-overlay ;
+}
+.small{
+  @apply  p-1 leading-3 rounded text-xs;
+}
+.medium{
+  @apply bg-acc-green p-2 leading-3 rounded text-sm;
+}
+.large{
+  @apply bg-acc-green p-4 leading-3 rounded-lg text-base;
+}

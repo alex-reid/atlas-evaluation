@@ -51,24 +51,6 @@ Component.query = gql`
     page(id: $databaseId, idType: DATABASE_ID, asPreview: $asPreview) {
       title
       content
-      blockTest {
-        fieldGroupName
-        pageLayout {
-          fieldGroupName
-          ... on BlockTestPageLayoutHeaderLayout {
-            fieldGroupName
-            testText
-          }
-          ... on BlockTestPageLayoutFooterLayout {
-            fieldGroupName
-            testList {
-              fieldGroupName
-              text
-              testDate
-            }
-          }
-        }
-      }
     }
     ...HeaderFragment
   }

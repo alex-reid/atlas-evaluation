@@ -1,0 +1,15 @@
+h1, .heading_1{
+  @apply text-5xl text-primary-800 font-bold my-2;
+}
+
+.heading_2{
+  @apply text-2xl text-primary-800 font-bold my-2;
+}
+
+.body{
+  @apply text-base pb-4 font-normal leading-normal;
+}
+
+.body-xs{
+  @apply text-xs pb-4 font-normal leading-normal;
+}
